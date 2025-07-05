@@ -4,15 +4,22 @@ import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
 import IndianWeddingSlider from "../LandingPage/ImageSlider2";
 import SamajCards from "../LandingPage/SamajCards";
+import ContactForm from "../ContactUs/ContactUs";
+
+
+
 
 const LandingPage = () => {
   return (
     <div>
+      
       <SadiHeroSection />
       <HeroSection />
       <CTASection />
       <FeaturesSection />
       <SamajCards/>
+      
+     
       {/* <IndianWeddingSlider/> */}
       
     </div>

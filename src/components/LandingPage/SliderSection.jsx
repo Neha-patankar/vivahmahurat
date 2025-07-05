@@ -139,7 +139,7 @@ const SadiHeroSection = () => {
               ))}
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8">
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8">
                 <div className="text-center text-white">
                   <h1 className="text-4xl font-bold mb-2 drop-shadow-lg">
                   🌸 विवाह महूरत 
@@ -151,7 +151,7 @@ const SadiHeroSection = () => {
                     अभी रजिस्टर करें
                   </button>
                 </div>
-              </div>
+              </div> */}
 
               {/* Floating decorative elements */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-80 animate-bounce"></div>

@@ -25,7 +25,7 @@ const SearchForm = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 p-6 rounded-3xl max-w-7xl mx-auto -mt-20 relative shadow-xl">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 p-6 rounded-3xl max-w-9xl mx-auto -mt-20 relative shadow-xl">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         {/* Looking For */}
         <div>
