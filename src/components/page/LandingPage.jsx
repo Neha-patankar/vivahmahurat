@@ -3,8 +3,9 @@ import FeaturesSection from "../../components/LandingPage/FeatureSection";
 import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
 import IndianWeddingSlider from "../LandingPage/ImageSlider2";
-import SamajCards from "../LandingPage/SamajCards";
+import SamajCards from "../Samaj/SamajCard";
 import ContactForm from "../ContactUs/ContactUs";
+
 
 
 

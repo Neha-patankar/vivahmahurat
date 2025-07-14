@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { categories } from "./VenderData.js"
 const VendorDirectory = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -121,16 +121,7 @@ const VendorDirectory = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'सभी वेंडर', icon: '🎯', color: 'from-purple-500 to-pink-500' },
-    { id: 'decoration', name: 'डेकोरेशन', icon: '🎊', color: 'from-yellow-500 to-orange-500' },
-    { id: 'catering', name: 'कैटरिंग', icon: '🍽️', color: 'from-green-500 to-teal-500' },
-    { id: 'photography', name: 'फोटोग्राफी', icon: '📸', color: 'from-blue-500 to-indigo-500' },
-    { id: 'beauty', name: 'ब्यूटी', icon: '💄', color: 'from-pink-500 to-rose-500' },
-    { id: 'venue', name: 'वेन्यू', icon: '🏛️', color: 'from-red-500 to-pink-500' },
-    { id: 'entertainment', name: 'एंटरटेनमेंट', icon: '🎵', color: 'from-cyan-500 to-blue-500' },
-    { id: 'transport', name: 'ट्रांसपोर्ट', icon: '🚗', color: 'from-gray-500 to-gray-700' }
-  ];
+
 
   const locations = ['all', 'Delhi', 'Mumbai', 'Jaipur', 'Pune', 'Lucknow', 'Bangalore', 'Chandigarh', 'Kolkata'];
 
