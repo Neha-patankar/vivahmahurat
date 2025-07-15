@@ -19,7 +19,7 @@ const SamajCard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-red-100 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-red-800 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">

@@ -59,12 +59,10 @@ const VivahMahuratBanner = () => {
 
         <div className="h-[460px] bg-gradient-to-br from-purple-800 via-rose-600 to-purple-500 text-white p-8 flex flex-col justify-center items-center relative overflow-hidden">
           {/* Logo */}
-          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-44 h-44 mb-4" />
+          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-52 h-52 mb-4" />
 
           {/* Magic Icon */}
-          <div className="mb-4 p-4 bg-white bg-opacity-20 rounded-full animate-pulse backdrop-blur-sm">
-            <Crown className="w-8 h-8 text-white" />
-          </div>
+        
 
           {/* Typewriter Text */}
           <h1 className="text-3xl sm:text-4xl font-bold text-center tracking-wider mb-2 ">

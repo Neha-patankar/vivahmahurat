@@ -20,10 +20,10 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "होम", href: "/" },
-    { label: "सुविधाएं", href: "/services" },
+    { label: "सेवाएं", href: "/services" },
     { label: "हमारे बारे में", href: "/about" },
     { label: "वेंडर डायरेक्टरी", href: "/vendor" },
-    { label: "प्लान विवाह", href: "/plan" },
+    { label: "विवाह रस्में ", href: "/riste" },
     { label: "रिश्ते", href: "/rishtey" },
     { label: "संपर्क करें", href: "/contactus" },
   ];
@@ -59,13 +59,13 @@ const Navbar = () => {
 
             <Link
               to="/register"
-              className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-5 py-2 rounded-full hover:shadow-md transform hover:scale-105 transition duration-200"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 font-bold text-white px-5 py-2 rounded-full hover:shadow-md transform hover:scale-105 transition duration-200"
             >
               रजिस्टर
             </Link>
             <Link
               to="/login"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full hover:shadow-md transform hover:scale-105 transition duration-200"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold px-5 py-2 rounded-full hover:shadow-md transform hover:scale-105 transition duration-200"
             >
               लॉगिन
             </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
             <Link
               to="/register"
               onClick={() => setIsMenuOpen(false)}
-              className="w-full block text-center mt-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition duration-200"
+              className="w-full block text-center mt-3 bg-gradient-to-r from-purple-600 to-indigo-600 font-bold text-white px-6 py-2 rounded-full hover:shadow-lg transition duration-200"
             >
               रजिस्टर
             </Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
             <Link
               to="/login"
               onClick={() => setIsMenuOpen(false)}
-              className="w-full block text-center mt-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition duration-200"
+              className="w-full block text-center mt-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white  font-bold px-6 py-2 rounded-full hover:shadow-lg transition duration-200"
             >
               लॉगिन
             </Link>

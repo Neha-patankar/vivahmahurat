@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { communities } from '../Samaj/communities';
 import { ArrowLeft } from 'lucide-react';
+import GotraCrousel from './GotraCrousel';
 
 const CommunityDetail = () => {
   const { id } = useParams();
@@ -16,7 +17,6 @@ const CommunityDetail = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-red-100 p-4">
-      <div className="max-w-6xl mx-auto">
         <button
           onClick={() => navigate('/')}
           className="flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all mb-6"
@@ -24,6 +24,8 @@ const CommunityDetail = () => {
           <ArrowLeft className="w-5 h-5 text-purple-600" />
           <span className="text-purple-600 font-medium">Back to Home</span>
         </button>
+      <div className="max-w-8xl mx-auto">
+      
 
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className={`bg-gradient-to-r ${community.gradient} p-8 text-white`}>
@@ -32,7 +34,7 @@ const CommunityDetail = () => {
               <div>
                 <h1 className="text-4xl font-bold mb-2">{community.name}</h1>
                 <h2 className="text-2xl opacity-90">{community.english}</h2>
-                <p className="text-xl opacity-80 mt-2">Population: {community.population || 'N/A'}</p>
+            
               </div>
             </div>
           </div>
@@ -53,6 +55,7 @@ const CommunityDetail = () => {
           </div>
         </div>
       </div>
+      <GotraCrousel/>
     </div>
   );
 };

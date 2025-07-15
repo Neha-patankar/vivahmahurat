@@ -2,11 +2,7 @@ import HeroSection from "../../components/LandingPage/HeroSection";
 import FeaturesSection from "../../components/LandingPage/FeatureSection";
 import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
-import IndianWeddingSlider from "../LandingPage/ImageSlider2";
 import SamajCards from "../Samaj/SamajCard";
-import ContactForm from "../ContactUs/ContactUs";
-
-
 
 
 
@@ -17,8 +13,9 @@ const LandingPage = () => {
       <SadiHeroSection />
       <HeroSection />
       <CTASection />
-      <FeaturesSection />
       <SamajCards/>
+      <FeaturesSection />
+      
       
      
       {/* <IndianWeddingSlider/> */}
