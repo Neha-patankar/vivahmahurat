@@ -57,13 +57,12 @@ const VivahMahuratBanner = () => {
           ✕
         </button>
 
-        <div className="h-[460px] bg-gradient-to-br from-purple-800 via-rose-600 to-purple-500 text-white p-8 flex flex-col justify-center items-center relative overflow-hidden">
+        <div className="h-[460px] bg-gradient-to-br from-rose-600 via-purple-800 to-yellow-500 text-white p-8 flex flex-col justify-start items-center relative overflow-hidden">
           {/* Logo */}
-          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-52 h-52 mb-4" />
+          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-44 h-44 mb-4" />
 
-          {/* Magic Icon */}
+       
         
-
           {/* Typewriter Text */}
           <h1 className="text-3xl sm:text-4xl font-bold text-center tracking-wider mb-2 ">
             {displayText}

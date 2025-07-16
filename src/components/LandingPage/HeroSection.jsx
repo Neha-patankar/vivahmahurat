@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
         {/* Logo */}
         <div className="mb-8">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center my-6">
             <img
               src="/vivahlogo.png"
               alt="Vivah Logo"

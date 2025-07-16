@@ -307,8 +307,8 @@ const MatrimonialCarousel = () => {
         ></div>
 
         {/* Header with Image */}
-        <div className="relative p-4 pb-4">
-          <div className="flex items-center gap-4">
+        <div className="relative p-4 pb-4 ">
+          <div className="flex items-center gap-4 ">
             <div className="relative">
               <img
                 src={profile.image}
@@ -324,7 +324,7 @@ const MatrimonialCarousel = () => {
               </div>
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 ">
               <div className="flex items-center gap-2 mb-1">
                 <User className="w-5 h-5 text-gray-600" />
                 <h3 className="text-xl font-bold text-gray-800">
@@ -347,8 +347,8 @@ const MatrimonialCarousel = () => {
         </div>
 
         {/* Profile Details */}
-        <div className="px-4 pb-6">
-          <div className="bg-white rounded-xl p-2 shadow-sm">
+        <div className="px-4 pb-6 bg-gradient-to-br from-yellow-400  to-yellow-500">
+          <div className=" rounded-xl p-2 shadow-sm">
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">

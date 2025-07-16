@@ -19,7 +19,7 @@ const SamajCard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-red-800 p-4">
+    <div className="min-h-screen bg-gradient-to-bl from-red-200  to-pink-100 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
@@ -29,7 +29,25 @@ const SamajCard = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent mb-2">
             अपना समाज चुनें
           </h1>
-          <p className="text-gray-600">Choose Your Community</p>
+         
+
+           {/* Footer Stats */}
+        <div className="mt-10 text-center">
+          <div className="inline-flex items-center space-x-6 bg-white rounded-xl px-6 py-3 shadow-xl border border-purple-100">
+            <div className="text-center">
+              <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {communities.length} +
+              </div>
+              <div className="text-xs text-gray-600 font-bold">samaj</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">
+                50000+
+              </div>
+              <div className="text-xs text-gray-600 font-bold">Profiles</div>
+            </div>
+          </div>
+        </div>
         </div>
 
         {/* Selected Community Display */}
@@ -51,7 +69,7 @@ const SamajCard = () => {
 
         {/* Search */}
         <div className="relative mb-8">
-          <div className="bg-white rounded-2xl shadow-xl p-4 border border-purple-100">
+          <div className="bg-white/90 rounded-2xl shadow-xl p-4 border border-purple-100">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -75,7 +93,7 @@ const SamajCard = () => {
                 tabIndex={0}
                 onClick={() => handleCardClick(community)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCardClick(community)}
-                className={`bg-white rounded-xl p-4 shadow-lg border-2 border-transparent cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 transform group ${
+                className={`bg-white/90 rounded-xl p-4 shadow-lg border-2 border-transparent cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 transform group ${
                   selectedCommunity === community.name
                     ? 'ring-2 ring-purple-400 bg-gradient-to-r from-purple-50 to-pink-50 border-purple-300'
                     : 'hover:border-purple-200'
@@ -101,26 +119,11 @@ const SamajCard = () => {
           ) : (
             <p className="col-span-full text-center text-gray-500">No communities found.</p>
           )}
-        </div>
+       
 
-        {/* Footer Stats */}
-        <div className="mt-10 text-center">
-          <div className="inline-flex items-center space-x-6 bg-white rounded-xl px-6 py-3 shadow-xl border border-purple-100">
-            <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {communities.length}
-              </div>
-              <div className="text-xs text-gray-600">Communities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">
-                50000+
-              </div>
-              <div className="text-xs text-gray-600">Members</div>
-            </div>
-          </div>
-        </div>
+      
       </div>
+       </div>
     </div>
   );
 };

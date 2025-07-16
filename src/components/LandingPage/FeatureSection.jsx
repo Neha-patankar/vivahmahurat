@@ -23,12 +23,12 @@ const FeaturesSection = () => (
   <section className="py-20 bg-gradient-to-r from-orange-100 via-red-100 to-pink-100">
     <div className="max-w-6xl mx-auto px-6">
       {/* Header Section */}
-      <div className="text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-transparent bg-clip-text mb-6">
+      <div className="text-center mb-14 max-w-6xl ">
+        <h2 className="text-3xl  md:text-3xl font-bold bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-transparent bg-clip-text mb-6">
           क्यों चुनें विवाह मुहूर्त?
         </h2>
-        <p className="text-gray-700 text-md md:text-lg max-w-3xl mx-auto leading-relaxed">
-          विवाह मुहूर्त – एक ही मंच पर रिश्ते से विदाई तक की सभी सेवाएं। अब 24+ समाज और 50000+ प्रोफाइल्स में से अपने परिजनों के लिए रिश्ता खोजें। हमारी सेवाओं में है –
+        <p className="text-gray-700 text-md md:text-lg max-w-3xl mx-auto leading-relaxed font-bold">
+          विवाह मुहूर्त – एक ही मंच पर रिश्ते से विदाई तक की सभी सेवाएं। अब 26+ समाज और 50000+ प्रोफाइल्स में से अपने परिजनों के लिए रिश्ता खोजें। हमारी सेवाओं में है –
           Vivah Assist, जहाँ हमारा असिस्टेंट आपके लिए रिश्ता ढूंढेगा और मीटिंग भी अरेंज करेगा।
           Vendor Directory के ज़रिए आप कैटरिंग, डेकोरेशन और 30+ केटेगरी के वेन्डर्स से डायरेक्ट बुकिंग कर सकते हैं।
         </p>

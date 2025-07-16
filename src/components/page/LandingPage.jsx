@@ -12,8 +12,9 @@ const LandingPage = () => {
       
       <SadiHeroSection />
       <HeroSection />
-      <CTASection />
       <SamajCards/>
+      <CTASection />
+      
       <FeaturesSection />
       
       
