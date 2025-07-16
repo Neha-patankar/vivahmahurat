@@ -36,7 +36,7 @@ const VivahMahuratBanner = () => {
           setTypingForward(true);
         }
       }
-    }, 500);
+    }, 200);
 
     return () => clearTimeout(timer);
   }, [textIndex, typingForward]);

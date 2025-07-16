@@ -356,5 +356,10 @@ export const communities = [
   description: 'स्वर्णकार सोनी समाज आभूषण निर्माण और व्यापार में पारंपरिक रूप से संलग्न रहा है।',
   englishDesc: 'The Swarnkar Soni community has traditionally been involved in jewelry making and trading.',
   gotra: ['अन्य गोत्र', 'स्वर्णकार सोनी समाज-1']
+},
+{
+  id:27,
+  name:'पद्मावती पोरवाल (जैन) ',
+  
 }
 ];

@@ -3,6 +3,8 @@ import FeaturesSection from "../../components/LandingPage/FeatureSection";
 import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
 import SamajCards from "../Samaj/SamajCard";
+import ServicePages from "../Services/ServicePages";
+import VivahRasme from "../Vivahrasme/VivahRasme";
 
 
 
@@ -14,7 +16,8 @@ const LandingPage = () => {
       <HeroSection />
       <SamajCards/>
       <CTASection />
-      
+      <ServicePages/>
+      <VivahRasme/>
       <FeaturesSection />
       
       

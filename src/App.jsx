@@ -10,6 +10,8 @@ import AboutUs from "./components/Aboutus/Aboutus";
 import SamajCard from "./components/Samaj/SamajCard";
 import VivahMahuratBanner from "./components/LandingPage/VivahMahuratBanner";
 import CommunityDetail from "./components/Samaj/CommunityDetail";
+import ServiceDetail from "./components/Services/ServiceDetail";
+import ServicePages from "./components/Services/ServicePages";
 
 function App() {
   return (
@@ -23,10 +25,11 @@ function App() {
         <Route path="/services" element={<ServicesPage/>} />
         <Route path="/vendor" element={<VendorDirectory/>} />
         <Route path="/about" element={<AboutUs/>} />
-         <Route path="/samaj" element={<SamajCard/>} />
-         <Route path="/community/:id" element={<CommunityDetail/>} />
+        <Route path="/samaj" element={<SamajCard/>} />
+        <Route path="/community/:id" element={<CommunityDetail/>} />
         
-       
+        <Route path="/servicepage" element={<ServicePages/>} />
+        <Route path="/service/:slug" element={<ServiceDetail/>} />
       </Routes>
       <Footer/>
     </Router>
