@@ -83,12 +83,13 @@ const services = [
   },
   {
     id: 9,
-    title: "Var-Vadhu",
-    slug: "varvadhu",
+    title: "Vivah Meetup",
+    slug: "Vivah Meetup",
     icon: UserCheck,
     color: "teal",
     bgGradient: "from-teal-400 to-cyan-500",
   },
+  
 ];
 
 const ServicePages = () => {
