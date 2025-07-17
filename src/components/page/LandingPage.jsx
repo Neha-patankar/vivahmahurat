@@ -4,7 +4,8 @@ import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
 import SamajCards from "../Samaj/SamajCard";
 import ServicePages from "../Services/ServicePages";
-import VivahRasme from "../Vivahrasme/VivahRasme";
+
+import RitualList from "../Vivahrasme/RitualList";
 
 
 
@@ -14,10 +15,11 @@ const LandingPage = () => {
       
       <SadiHeroSection />
       <HeroSection />
-      <SamajCards/>
       <CTASection />
+      <SamajCards/>
+    
       <ServicePages/>
-      <VivahRasme/>
+      <RitualList/>
       <FeaturesSection />
       
       

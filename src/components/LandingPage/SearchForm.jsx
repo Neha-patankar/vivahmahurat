@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Search } from 'lucide-react';
+import React, { useState } from "react";
+import { Search } from "lucide-react";
 
 const SearchForm = () => {
   const [searchData, setSearchData] = useState({
-    lookingFor: 'bride',
-    fromAge: '',
-    toAge: '',
-    religion: '',
+    lookingFor: "bride",
+    fromAge: "",
+    toAge: "",
+    maritalStatus: "",
   });
 
   const ageOptions = Array.from({ length: 40 }, (_, i) => i + 18); // Ages 18–57
@@ -21,84 +21,95 @@ const SearchForm = () => {
 
   const handleSearch = () => {
     console.log("Search triggered with data:", searchData);
-    // You can call your API here or pass the data to parent via callback
+    // API call or parent callback can go here
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 p-6 rounded-3xl max-w-9xl mx-auto -mt-20 relative shadow-xl">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 p-6 rounded-3xl max-w-7xl mx-auto -mt-20 relative shadow-xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {/* Looking For */}
         <div>
-          <label className="text-white font-medium block mb-1">I'm looking for a</label>
+          <label className="text-white font-medium block mb-1">
+             I'm looking for
+          </label>
           <select
             name="lookingFor"
             value={searchData.lookingFor}
             onChange={handleInputChange}
             className="w-full rounded-lg p-2 focus:outline-none"
           >
-            <option value="bride">Bride</option>
-            <option value="groom">Groom</option>
+            <option value="bride">दुल्हन (Bride)</option>
+            <option value="groom">दूल्हा (Groom)</option>
           </select>
         </div>
 
         {/* From Age */}
         <div>
-          <label className="text-white font-medium block mb-1">From Age</label>
+          <label className="text-white font-medium block mb-1">
+            आयु / From Age
+          </label>
           <select
             name="fromAge"
             value={searchData.fromAge}
             onChange={handleInputChange}
             className="w-full rounded-lg p-2 focus:outline-none"
           >
-            <option value="">Select</option>
+            <option value="">चुनें / Select</option>
             {ageOptions.map((age) => (
-              <option key={age} value={age}>{age}</option>
+              <option key={age} value={age}>
+                {age}
+              </option>
             ))}
           </select>
         </div>
 
         {/* To Age */}
         <div>
-          <label className="text-white font-medium block mb-1">To Age</label>
+          <label className="text-white font-medium block mb-1">
+            आयु / To Age
+          </label>
           <select
             name="toAge"
             value={searchData.toAge}
             onChange={handleInputChange}
             className="w-full rounded-lg p-2 focus:outline-none"
           >
-            <option value="">Select</option>
+            <option value="">चुनें / Select</option>
             {ageOptions.map((age) => (
-              <option key={age} value={age}>{age}</option>
+              <option key={age} value={age}>
+                {age}
+              </option>
             ))}
           </select>
         </div>
 
-        {/* Religion */}
+        {/* Marital Status */}
         <div>
-          <label className="text-white font-medium block mb-1">Religion</label>
+          <label className="text-white font-medium block mb-1 text-nowrap">
+            विवाह स्थिति / Marital Status
+          </label>
           <select
-            name="religion"
-            value={searchData.religion}
+            name="maritalStatus"
+            value={searchData.maritalStatus}
             onChange={handleInputChange}
             className="w-full rounded-lg p-2 focus:outline-none"
           >
-            <option value="">Any</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Muslim">Muslim</option>
-            <option value="Christian">Christian</option>
-            <option value="Sikh">Sikh</option>
-            <option value="Jain">Jain</option>
+            <option value="">कोई भी / Any</option>
+            <option value="unmarried">अविवाहित / Unmarried</option>
+            <option value="divorced">तलाकशुदा / Divorced</option>
+            <option value="widowed">विधवा / Widowed</option>
+            <option value="separated">अलग रह रहे हैं / Separated</option>
           </select>
         </div>
 
-        {/* Button */}
-        <div className="col-span-2 sm:col-span-1 flex items-end justify-center">
+        {/* Search Button */}
+        <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-end justify-center">
           <button
             onClick={handleSearch}
             className="w-full bg-white text-gray-800 font-bold py-2 px-4 rounded-xl hover:scale-105 transition-all duration-300 flex justify-center items-center gap-2"
           >
             <Search className="w-5 h-5" />
-            Let's Begin
+            शुरुआत करें / Let's Begin
           </button>
         </div>
       </div>

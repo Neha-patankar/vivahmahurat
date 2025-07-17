@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
 
         {/* Search Form */}
-        <div className="mt-12">
+        <div className="my-10 ">
           <SearchForm />
         </div>
       </div>

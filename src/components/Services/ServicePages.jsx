@@ -10,9 +10,6 @@ import {
   Star,
   UserCheck,
   ArrowRight,
-  Sparkles,
-  Phone,
-  Mail,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -22,74 +19,82 @@ const services = [
     title: "Match Making",
     slug: "match-making",
     icon: Heart,
-    color: "rose",
     bgGradient: "from-rose-400 to-pink-500",
+    textColor: "text-rose-600",
+    hoverBorder: "hover:border-rose-200",
   },
   {
     id: 2,
     title: "Parichay Sammelan Management",
     slug: "parichay-sammelan",
     icon: Users,
-    color: "purple",
     bgGradient: "from-purple-400 to-indigo-500",
+    textColor: "text-purple-600",
+    hoverBorder: "hover:border-purple-200",
   },
   {
     id: 3,
     title: "White Collar Matrimony Site/App",
     slug: "white-collar-matrimony",
     icon: Briefcase,
-    color: "blue",
     bgGradient: "from-blue-400 to-cyan-500",
+    textColor: "text-blue-600",
+    hoverBorder: "hover:border-blue-200",
   },
   {
     id: 4,
     title: "Assistance Match Making",
     slug: "assistance-match-making",
     icon: HandHeart,
-    color: "emerald",
     bgGradient: "from-emerald-400 to-teal-500",
+    textColor: "text-emerald-600",
+    hoverBorder: "hover:border-emerald-200",
   },
   {
     id: 5,
     title: "Marriage Biodata Maker",
     slug: "biodata-maker",
     icon: FileText,
-    color: "indigo",
     bgGradient: "from-indigo-400 to-purple-500",
+    textColor: "text-indigo-600",
+    hoverBorder: "hover:border-indigo-200",
   },
   {
     id: 6,
     title: "Premium & VIP Rishte",
     slug: "premium-vip-rishte",
     icon: Crown,
-    color: "amber",
     bgGradient: "from-amber-400 to-orange-500",
+    textColor: "text-amber-600",
+    hoverBorder: "hover:border-amber-200",
   },
   {
     id: 7,
     title: "Vivah Management",
     slug: "vivah-management",
     icon: Calendar,
-    color: "pink",
     bgGradient: "from-pink-400 to-rose-500",
+    textColor: "text-pink-600",
+    hoverBorder: "hover:border-pink-200",
   },
   {
     id: 8,
     title: "Kundali Milan",
     slug: "kundali-milan",
     icon: Star,
-    color: "orange",
     bgGradient: "from-orange-400 to-red-500",
+    textColor: "text-orange-600",
+    hoverBorder: "hover:border-orange-200",
   },
   {
     id: 9,
     title: "Vivah Meetup",
-    slug: "Vivah Meetup",
+    slug: "vivah-meetup",
     icon: UserCheck,
-    color: "teal",
     bgGradient: "from-teal-400 to-cyan-500",
+    textColor: "text-teal-600",
+    hoverBorder: "hover:border-teal-200",
   },
-  
 ];
 
 const ServicePages = () => {
@@ -100,123 +105,68 @@ const ServicePages = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-bl from-orange-300 via-white to-orange-300">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-rose-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+    <div className="min-h-screen bg-gradient-to-bl from-orange-200 via-white to-orange-100">
+      {/* Header */}
+      <div className="w-full bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 py-6 text-center">
+        <h1 className="text-3xl font-bold text-white">हमारी सेवाएं</h1>
       </div>
 
-      <div className="relative z-10 p-8">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center mb-6">
-            {/* <div className="bg-gradient-to-r from-rose-500 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mr-4 shadow-lg">
-              <Sparkles className="h-8 w-8 text-white" />
-            </div> */}
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-              Our Services
-            </h1>
-            {/* <div className="bg-gradient-to-r from-rose-500 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center ml-4 shadow-lg">
-              <Sparkles className="h-8 w-8 text-white" />
-            </div> */}
-          </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive matrimonial services designed to help you
-            find your perfect life partner with trust, tradition, and modern
-            efficiency.
-          </p>
-        </div>
+      {/* Description */}
+      <div className="text-center px-4 py-8">
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Discover our comprehensive matrimonial services designed to help you
+          find your perfect life partner with trust, tradition, and modern
+          efficiency.
+        </p>
+      </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {services.map((service) => {
-            const IconComponent = service.icon;
-            return (
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-4 md:px-10 lg:px-20 pb-10">
+        {services.map((service) => {
+          const Icon = service.icon;
+          return (
+            <div
+              key={service.id}
+              onClick={() => goToService(service.slug)}
+              className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl border border-gray-100 cursor-pointer transition-transform duration-300 hover:-translate-y-2 ${service.hoverBorder}`}
+            >
+              {/* Gradient Background Hover Overlay */}
               <div
-                key={service.id}
-                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
-                onClick={() => goToService(service.slug)}
-              >
-                {/* Background gradient overlay on hover */}
+                className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`}
+              ></div>
+
+              <div className="relative z-10 ">
+                <div className="flex gap-4">
+                {/* Icon */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-                ></div>
-
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-50 rounded-full opacity-30"></div>
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full opacity-20"></div>
-
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon container */}
-                  <div
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${service.bgGradient} shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-
-                  {/* Title */}
-                  <h2
-                    className={`text-xl font-bold text-gray-800 mb-4 group-hover:text-${service.color}-600 transition-colors duration-300`}
-                  >
-                    {service.title}
-                  </h2>
-
-                  {/* Description */}
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Click to know more about {service.title}.
-                  </p>
-
-                  {/* Action indicator */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-gray-500 group-hover:text-gray-700 transition-colors">
-                      <button className="bg-blue-800  text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-500 transition-colors inline-flex items-center justify-center shadow-lg">
-                       
-                        Know more
-                      </button>
-                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                    <div
-                      className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}
-                    >
-                      <ArrowRight className="h-4 w-4 text-white" />
-                    </div>
-                  </div>
+                  className={`w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br ${service.bgGradient} mb-4 shadow-md`}
+                >
+                  <Icon className="text-white w-7 h-7" />
                 </div>
 
-                {/* Hover border effect */}
-                <div
-                  className={`absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-${service.color}-200 transition-colors duration-300`}
-                ></div>
-              </div>
-            );
-          })}
-        </div>
+                {/* Title */}
+                <h2
+                  className={`text-lg font-bold mb-2 group-hover:${service.textColor}`}
+                >
+                  {service.title}
+                </h2>
+               </div>
+                {/* Description */}
+                <p className="text-sm text-gray-600 mb-4">
+                  Click to know more about {service.title}.
+                </p>
 
-        {/* Contact Section */}
-        {/* <div className="mt-16 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Find Your Perfect Match?
-            </h2>
-            <p className="text-xl mb-8 text-rose-100">
-              Let our experienced team guide you through your matrimonial
-              journey with care and expertise
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-rose-600 px-8 py-3 rounded-full font-semibold hover:bg-rose-50 transition-colors inline-flex items-center justify-center shadow-lg">
-                <Phone className="h-5 w-5 mr-2" />
-                Call Now
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-rose-600 transition-colors inline-flex items-center justify-center">
-                <Mail className="h-5 w-5 mr-2" />
-                Get Quote
-              </button>
+                {/* Know More Button */}
+                <div className="flex justify-between items-center">
+                  <button className="bg-blue-800 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-orange-500 transition">
+                     और जानें
+                  </button>
+                 
+                </div>
+              </div>
             </div>
-          </div>
-        </div> */}
+          );
+        })}
       </div>
     </div>
   );

@@ -12,6 +12,8 @@ import VivahMahuratBanner from "./components/LandingPage/VivahMahuratBanner";
 import CommunityDetail from "./components/Samaj/CommunityDetail";
 import ServiceDetail from "./components/Services/ServiceDetail";
 import ServicePages from "./components/Services/ServicePages";
+import RitualList from "./components/Vivahrasme/RitualList";
+import RitualDetails from "./components/Vivahrasme/RitualDetails";
 
 function App() {
   return (
@@ -30,7 +32,12 @@ function App() {
         
         <Route path="/servicepage" element={<ServicePages/>} />
         <Route path="/service/:slug" element={<ServiceDetail/>} />
+
+        <Route path="/rasme" element={<RitualList/>} />
+        <Route path="/rituals/:id" element={<RitualDetails/>} />
       </Routes>
+
+      
       <Footer/>
     </Router>
     </div>

@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { Crown } from 'lucide-react';
@@ -8,7 +6,7 @@ const VivahMahuratBanner = () => {
   const [showBanner, setShowBanner] = useState(true);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
-  const fullText = "Welcome to Vivah Mahurat";
+  const fullText = "Welcome to VivahMahurat";
   const [displayText, setDisplayText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [typingForward, setTypingForward] = useState(true);
@@ -56,20 +54,24 @@ const VivahMahuratBanner = () => {
         >
           ✕
         </button>
-
-        <div className="h-[460px] bg-gradient-to-br from-rose-600 via-purple-800 to-yellow-500 text-white p-8 flex flex-col justify-start items-center relative overflow-hidden">
+      
+        <div className="h-[460px] bg-gradient-to-br from-yellow-500  to-rose-600 text-white p-8 flex flex-col justify-start items-center relative overflow-hidden">
           {/* Logo */}
+          
+          <div className='flex gap-4'>
+          <img src="/Banner/bannerimage.png" className='w-28 h-28 rounded-lg mt-10'/>
           <img src="/vivahlogo.png" alt="Vivah Logo" className="w-44 h-44 mb-4" />
 
-       
-        
+          
+         </div>
           {/* Typewriter Text */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-center tracking-wider mb-2 ">
+          <h1 className="text-2xl sm:text-2xl font-bold text-center tracking-wider mb-2 ">
             {displayText}
             <span className="border-r-2 border-white ml-1 animate-pulse" />
           </h1>
 
-          <p className="text-center text-lg opacity-90">आपका स्वागत है हमारे विशेष विवाह महूर्त मंच पर</p>
+          <p className="text-center text-lg opacity-90 font-bold">26+ समाज के 50000+ परिवारों के विवाह मिलन मैं आपका स्वागत है</p>
+         
 
           {/* Background Decorations */}
           <div className="absolute inset-0 opacity-10 pointer-events-none">
