@@ -55,12 +55,12 @@ const VivahMahuratBanner = () => {
           ✕
         </button>
       
-        <div className="h-[460px] bg-gradient-to-br from-yellow-500  to-rose-600 text-white p-8 flex flex-col justify-start items-center relative overflow-hidden">
+        <div className="h-[460px] bg-gradient-to-br from-rose-500 via-pink-500   to-yellow-600 text-white p-8 flex flex-col justify-start items-center relative overflow-hidden">
           {/* Logo */}
           
           <div className='flex gap-4'>
-          <img src="/Banner/bannerimage.png" className='w-28 h-28 rounded-lg mt-10'/>
-          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-44 h-44 mb-4" />
+          
+          <img src="/vivahlogo.png" alt="Vivah Logo" className="w-40 h-40 mb-4" />
 
           
          </div>
@@ -110,6 +110,7 @@ const VivahMahuratBanner = () => {
 
           {/* Bottom Decoration */}
           <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-white to-transparent opacity-30"></div>
+          <img src="/Banner/bannerimage.png" className='w-48 h-48 rounded-lg mt-10'/>
         </div>
       </div>
     </div>

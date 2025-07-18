@@ -121,15 +121,18 @@ const ServicePages = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-4 md:px-10 lg:px-20 pb-10">
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 md:px-10 lg:px-20 sm:pb-20 pb-10">
         {services.map((service) => {
           const Icon = service.icon;
           return (
             <div
               key={service.id}
               onClick={() => goToService(service.slug)}
-              className={`group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl border border-gray-100 cursor-pointer transition-transform duration-300 hover:-translate-y-2 ${service.hoverBorder}`}
+              className={`group relative bg-white rounded-2xl p-2  shadow-md hover:shadow-xl border border-gray-100 cursor-pointer transition-transform duration-300 hover:-translate-y-2 ${service.hoverBorder}`}
             >
+              <div className="w-full h-44 sm:w-full sm:h-52">
+                <img src="/Banner/bannerimage.png" className="w-full h-52 rounded-md"></img>
+              </div>
               {/* Gradient Background Hover Overlay */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`}
@@ -139,26 +142,24 @@ const ServicePages = () => {
                 <div className="flex gap-4">
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br ${service.bgGradient} mb-4 shadow-md`}
+                  className={`w-8 h-8 flex items-center justify-center rounded-xl bg-gradient-to-br ${service.bgGradient} mb-4 shadow-md`}
                 >
-                  <Icon className="text-white w-7 h-7" />
+                  <Icon className="text-white w-4 h-4" />
                 </div>
 
                 {/* Title */}
                 <h2
-                  className={`text-lg font-bold mb-2 group-hover:${service.textColor}`}
+                  className={`text-md font-bold mb-2 items-center group-hover:${service.textColor}`}
                 >
                   {service.title}
                 </h2>
                </div>
                 {/* Description */}
-                <p className="text-sm text-gray-600 mb-4">
-                  Click to know more about {service.title}.
-                </p>
+                
 
                 {/* Know More Button */}
-                <div className="flex justify-between items-center">
-                  <button className="bg-blue-800 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-orange-500 transition">
+                <div className="flex justify-center items-center  ">
+                  <button className="bg-blue-800 text-white   px-3 py-2 rounded-full text-xs font-bold hover:bg-orange-500 transition">
                      और जानें
                   </button>
                  

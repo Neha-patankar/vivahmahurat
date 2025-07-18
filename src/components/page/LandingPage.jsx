@@ -6,14 +6,15 @@ import SamajCards from "../Samaj/SamajCard";
 import ServicePages from "../Services/ServicePages";
 
 import RitualList from "../Vivahrasme/RitualList";
+import Slider from "../LandingPage/Slider";
 
 
 
 const LandingPage = () => {
   return (
     <div>
-      
-      <SadiHeroSection />
+      <Slider/>
+      {/* <SadiHeroSection /> */}
       <HeroSection />
       <CTASection />
       <SamajCards/>
