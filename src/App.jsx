@@ -14,12 +14,15 @@ import ServiceDetail from "./components/Services/ServiceDetail";
 import ServicePages from "./components/Services/ServicePages";
 import RitualList from "./components/Vivahrasme/RitualList";
 import RitualDetails from "./components/Vivahrasme/RitualDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
    <div>
     <VivahMahuratBanner/>
+    
     <Router>
+       <ScrollToTop/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<LandingPage/>} />

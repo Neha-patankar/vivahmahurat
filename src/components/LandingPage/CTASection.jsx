@@ -9,7 +9,7 @@ const CTASection = () => (
       {/* <p className="text-xl text-white/90 mb-10">
         Join thousands of happy couples who found their perfect match through Vivah Mahurat
       </p> */}
-      <button className="bg-white mt-5 text-orange-600 font-bold py-2 px-8 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+      <button className="bg-white mt-5 text-orange-600 font-bold py-2 px-8 rounded-full shadow-lg hover:bg-purple-600 hover:text-white transform hover:scale-105 transition-all duration-300">
        आज ही रजिस्टर करें
       </button>
     </div>

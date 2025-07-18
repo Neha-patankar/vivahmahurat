@@ -80,7 +80,7 @@ export default function RitualList() {
 
               {/* Gradient Color Overlay (Your Custom Color Preserved) */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${ritual.color} opacity-85 group-hover:opacity-90 transition-opacity duration-300`}
+                className={`absolute inset-0 bg-gradient-to-br ${ritual.color} opacity-85 group-hover:opacity-10 transition-opacity duration-500`}
               />
 
               {/* Content */}

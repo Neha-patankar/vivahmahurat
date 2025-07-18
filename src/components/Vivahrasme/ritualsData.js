@@ -178,7 +178,7 @@ export const rituals = [
     description: "विवाह की आधिकारिक घोषणा और परिवारों की सहमति।",
     icon: Calendar,
     color: "from-blue-500 to-blue-700",
-    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/rasmeimage/rokaCeremony.png",
     link: "/ritual/roka"
   },
   {
@@ -208,7 +208,7 @@ export const rituals = [
     description: "दूल्हे को सम्मानित करने हेतु कन्या पक्ष द्वारा तिलक गया संस्कार।",
     icon: Heart,
     color: "from-red-500 to-orange-600",
-    image: "https://images.unsplash.com/photo-1594736797933-d0d3dc4348cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/rasmeimage/titalk.png",
     link: "/ritual/tilak"
   },
   {
@@ -218,7 +218,7 @@ export const rituals = [
     description: "दूल्हा-दुल्हन को सुंदरता और सुंदरता हेतु हल्दी लगाई जाती है।",
     icon: Users,
     color: "from-yellow-500 to-green-600",
-    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/rasmeimage/haldi.png",
     link: "/ritual/haldi"
   },
   {
@@ -228,7 +228,7 @@ export const rituals = [
     description: "दुल्हन व अन्य महिलाओं के हाथों पर मेहंदी लगाई जाती है।",
     icon: Sun,
     color: "from-green-500 to-yellow-600",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/rasmeimage/mehnadi.png",
     link: "/ritual/mehendi"
   },
   {

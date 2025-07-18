@@ -106,7 +106,7 @@ const SearchForm = () => {
         <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-end justify-center">
           <button
             onClick={handleSearch}
-            className="w-full bg-white text-gray-800 font-bold py-2 px-4 rounded-xl hover:scale-105 transition-all duration-300 flex justify-center items-center gap-2"
+            className="w-full bg-purple-500 text-white font-bold py-2 px-0 rounded-xl hover:scale-105 transition-all duration-300 flex justify-center items-center gap-4"
           >
             <Search className="w-5 h-5" />
             शुरुआत करें / Let's Begin
