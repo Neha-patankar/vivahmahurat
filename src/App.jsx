@@ -28,6 +28,7 @@ function App() {
         <Route path="/" element={<LandingPage/>} />
         <Route path="/contactus" element={<ContactForm/>} />
         <Route path="/services" element={<ServicesPage/>} />
+        
         <Route path="/vendor" element={<VendorDirectory/>} />
         <Route path="/about" element={<AboutUs/>} />
         <Route path="/samaj" element={<SamajCard/>} />
