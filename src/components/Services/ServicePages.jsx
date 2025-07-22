@@ -11,7 +11,7 @@ import {
   UserCheck,
   ArrowRight,
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -106,7 +106,6 @@ const ServicePages = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-bl from-orange-200 via-white to-orange-100">
-     
       {/* Header */}
       <div className="w-full bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 py-6 text-center">
         <h1 className="text-3xl font-bold text-white">हमारी सेवाएं</h1>
