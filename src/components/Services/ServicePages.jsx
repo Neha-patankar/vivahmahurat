@@ -250,7 +250,7 @@ const services = [
     bgGradient: "from-amber-400 to-orange-500",
     textColor: "text-amber-600",
     hoverBorder: "hover:border-amber-200",
-    image: "/servicesimage/vsammelan.png", // Unique image for Premium & VIP Rishte
+    image: "/servicesimage/matchmacking.png", // Unique image for Premium & VIP Rishte
   },
   {
     id: 7,
