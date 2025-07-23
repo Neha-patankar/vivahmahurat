@@ -270,7 +270,7 @@ const services = [
     bgGradient: "from-orange-400 to-red-500",
     textColor: "text-orange-600",
     hoverBorder: "hover:border-orange-200",
-    image: "/servicesimage/matchmacking.png", // Unique image for Kundali Milan
+    image: "/servicesimage/vsammelan.png", // Unique image for Kundali Milan
   },
   {
     id: 9,
