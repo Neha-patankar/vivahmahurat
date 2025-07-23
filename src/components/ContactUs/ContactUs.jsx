@@ -335,7 +335,7 @@ export default function ContactForm() {
                 <MessageCircle className="w-5 h-5" />
                 <span className="font-semibold">Get In Touch</span>
               </div>
-              <h1 className="text-2xl font-bold text-gray-800 mb-2">संपर्क फॉर्म</h1>
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">संपर्क फॉर्म.</h1>
               <p className="text-gray-600">हमें अपना संदेश भेजें</p>
             </div>
 
