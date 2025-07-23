@@ -4,7 +4,6 @@ import CTASection from "../../components/LandingPage/CTASection";
 import SadiHeroSection from "../LandingPage/SliderSection";
 import SamajCards from "../Samaj/SamajCard";
 import ServicePages from "../Services/ServicePages";
-
 import RitualList from "../Vivahrasme/RitualList";
 import Slider from "../LandingPage/Slider";
 
@@ -18,13 +17,9 @@ const LandingPage = () => {
       <HeroSection />
       <CTASection />
       <SamajCards/>
-    
       <ServicePages/>
       <RitualList/>
       <FeaturesSection />
-      
-      
-     
       {/* <IndianWeddingSlider/> */}
       
     </div>

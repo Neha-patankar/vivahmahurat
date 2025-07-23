@@ -20,10 +20,10 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "होम", href: "/" },
-    { label: "सेवाएं", href: "/services" },
+    { label: "सेवाएं", href: "/servicespage" },
     { label: "हमारे बारे में", href: "/about" },
     { label: "वेंडर डायरेक्टरी", href: "/vendor" },
-    { label: "विवाह रस्में ", href: "/riste" },
+    { label: "विवाह रस्में ", href: "/rasmepage" },
     { label: "रिश्ते", href: "/rishtey" },
     { label: "संपर्क करें", href: "/contactus" },
   ];

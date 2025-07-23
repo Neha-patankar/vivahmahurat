@@ -1,189 +1,164 @@
-import React from 'react';
 
-const InfiniteAdSlider = () => {
-  // Advertisement data
-  const advertisements = [
-    {
-      id: 1,
-      title: "Premium Wedding Services",
-      subtitle: "सुंदर विवाह समारोह",
-      description: "Book your dream wedding today!",
-      bgColor: "from-rose-500 to-pink-600",
-      icon: "💒"
-    },
-    {
-      id: 2,
-      title: "Photography Package",
-      subtitle: "यादगार तस्वीरें",
-      description: "Professional wedding photography",
-      bgColor: "from-purple-500 to-indigo-600",
-      icon: "📸"
-    },
-    {
-      id: 3,
-      title: "Catering Services",
-      subtitle: "स्वादिष्ट व्यंजन",
-      description: "Delicious food for your guests",
-      bgColor: "from-orange-500 to-red-600",
-      icon: "🍽️"
-    },
-    {
-      id: 4,
-      title: "Decoration & Setup",
-      subtitle: "खूबसूरत सजावट",
-      description: "Beautiful venue decorations",
-      bgColor: "from-green-500 to-teal-600",
-      icon: "🎨"
-    },
-    {
-      id: 5,
-      title: "Music & Entertainment",
-      subtitle: "संगीत और मनोरंजन",
-      description: "Live music and DJ services",
-      bgColor: "from-yellow-500 to-orange-600",
-      icon: "🎵"
-    },
-    {
-      id: 6,
-      title: "Bridal Makeup",
-      subtitle: "दुल्हन का श्रृंगार",
-      description: "Professional bridal makeup",
-      bgColor: "from-pink-500 to-rose-600",
-      icon: "💄"
+import React, { useEffect, useState } from "react";
+import {
+  Heart,
+  Users,
+  Briefcase,
+  HandHeart,
+  FileText,
+  Crown,
+  Calendar,
+  Star,
+  UserCheck,
+} from "lucide-react";
+
+const services = [
+  {
+    id: 1,
+    title: "Match Making",
+    slug: "match-making",
+    icon: Heart,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-rose-400 to-pink-500",
+    hoverBorder: "hover:border-rose-200",
+  },
+  {
+    id: 2,
+    title: "Parichay Sammelan Management",
+    slug: "parichay-sammelan",
+    icon: Users,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-purple-400 to-indigo-500",
+    hoverBorder: "hover:border-purple-200",
+  },
+  {
+    id: 3,
+    title: "White Collar Matrimony Site/App",
+    slug: "white-collar-matrimony",
+    icon: Briefcase,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-blue-400 to-cyan-500",
+    hoverBorder: "hover:border-blue-200",
+  },
+  {
+    id: 4,
+    title: "Assistance Match Making",
+    slug: "assistance-match-making",
+    icon: HandHeart,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-emerald-400 to-teal-500",
+    hoverBorder: "hover:border-emerald-200",
+  },
+  {
+    id: 5,
+    title: "Marriage Biodata Maker",
+    slug: "biodata-maker",
+    icon: FileText,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-indigo-400 to-purple-500",
+    hoverBorder: "hover:border-indigo-200",
+  },
+  {
+    id: 6,
+    title: "Premium & VIP Rishte",
+    slug: "premium-vip-rishte",
+    icon: Crown,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-amber-400 to-orange-500",
+    hoverBorder: "hover:border-amber-200",
+  },
+  {
+    id: 7,
+    title: "Vivah Management",
+    slug: "vivah-management",
+    icon: Calendar,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-pink-400 to-rose-500",
+    hoverBorder: "hover:border-pink-200",
+  },
+  {
+    id: 8,
+    title: "Kundali Milan",
+    slug: "kundali-milan",
+    icon: Star,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-orange-400 to-red-500",
+    hoverBorder: "hover:border-orange-200",
+  },
+  {
+    id: 9,
+    title: "Vivah Meetup",
+    slug: "vivah-meetup",
+    icon: UserCheck,
+    image: "/servicesimage/vsammelan.png",
+    bgGradient: "from-teal-400 to-cyan-500",
+    hoverBorder: "hover:border-teal-200",
+  },
+];
+
+const ServiceSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const width = window.innerWidth;
+      if (width >= 1280) setVisibleCount(5); // Desktop
+      else if (width >= 768) setVisibleCount(3); // Tablet
+      else setVisibleCount(1); // Mobile
+    };
+
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [visibleCount]);
+
+  const getVisibleServices = () => {
+    const result = [];
+    for (let i = 0; i < visibleCount; i++) {
+      const index = (currentIndex + i) % services.length;
+      result.push(services[index]);
     }
-  ];
+    return result;
+  };
 
   return (
-    <div className="w-full bg-gradient-to-r from-gray-100 to-gray-200 py-8 overflow-hidden">
-      {/* Header */}
-      <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">
-          🌟 Special Offers 🌟
-        </h2>
-        <p className="text-gray-600">विशेष छूट और सेवाएं</p>
-      </div>
-
-      {/* Infinite Slider */}
-      <div className="relative">
-        {/* Left to Right Scroll */}
-        <div className="flex animate-scroll-left space-x-6 mb-4">
-          {/* Duplicate ads for seamless loop */}
-          {[...advertisements, ...advertisements].map((ad, index) => (
+    <div className="bg-gradient-to-bl from-orange-100 via-white to-orange-200 py-8 px-4 sm:px-6 lg:px-16 mt-16">
+      <div className="overflow-hidden w-full">
+        <div className="flex gap-4 transition-all duration-500">
+          {getVisibleServices().map((service) => (
             <div
-              key={`left-${index}`}
-              className={`flex-shrink-0 w-80 h-32 bg-gradient-to-r ${ad.bgColor} rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
+              key={service.id}
+              className={`w-full sm:w-[48%] md:w-[31%] xl:w-[18%] flex-shrink-0 bg-white rounded-lg border ${service.hoverBorder} shadow-md transition duration-300 overflow-hidden`}
             >
-              {/* Decorative circles */}
-              <div className="absolute top-2 right-2 w-16 h-16 bg-white bg-opacity-20 rounded-full"></div>
-              <div className="absolute bottom-2 left-2 w-8 h-8 bg-white bg-opacity-30 rounded-full"></div>
-              
-              <div className="p-4 h-full flex items-center justify-between text-white relative z-10">
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold mb-1">{ad.title}</h3>
-                  <p className="text-sm text-white text-opacity-90 mb-1">{ad.subtitle}</p>
-                  <p className="text-xs text-white text-opacity-80">{ad.description}</p>
-                </div>
-                <div className="text-4xl ml-4">{ad.icon}</div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-3 text-center">
+                <h3 className="text-sm font-semibold text-gray-800">
+                  {service.title}
+                </h3>
+                <button
+                  className={`mt-3 px-3 py-1.5 text-xs text-white rounded-full bg-gradient-to-r ${service.bgGradient} hover:scale-105 transition`}
+                >
+                  और जानें
+                </button>
               </div>
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 -translate-x-full animate-shine"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Right to Left Scroll */}
-        <div className="flex animate-scroll-right space-x-6">
-          {/* Duplicate ads for seamless loop - reverse order */}
-          {[...advertisements.reverse(), ...advertisements].map((ad, index) => (
-            <div
-              key={`right-${index}`}
-              className={`flex-shrink-0 w-80 h-32 bg-gradient-to-r ${ad.bgColor} rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
-            >
-              {/* Decorative elements */}
-              <div className="absolute top-3 left-3 w-12 h-12 bg-white bg-opacity-20 rounded-full"></div>
-              <div className="absolute bottom-3 right-3 w-6 h-6 bg-white bg-opacity-30 rounded-full"></div>
-              
-              <div className="p-4 h-full flex items-center justify-between text-white relative z-10">
-                <div className="text-4xl mr-4">{ad.icon}</div>
-                <div className="flex-1 text-right">
-                  <h3 className="text-lg font-bold mb-1">{ad.title}</h3>
-                  <p className="text-sm text-white text-opacity-90 mb-1">{ad.subtitle}</p>
-                  <p className="text-xs text-white text-opacity-80">{ad.description}</p>
-                </div>
-              </div>
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 translate-x-full animate-shine-reverse"></div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Call to Action */}
-      <div className="text-center mt-8">
-        <button className="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse">
-          🎉 Contact Us Today! 🎉
-        </button>
-        <p className="text-gray-600 mt-2 text-sm">आज ही संपर्क करें और विशेष छूट पाएं!</p>
-      </div>
-
-      {/* Custom CSS for animations */}
-      <style jsx>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes scroll-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes shine {
-          0% {
-            transform: translateX(-100%) skewX(-12deg);
-          }
-          100% {
-            transform: translateX(200%) skewX(-12deg);
-          }
-        }
-
-        @keyframes shine-reverse {
-          0% {
-            transform: translateX(100%) skewX(-12deg);
-          }
-          100% {
-            transform: translateX(-200%) skewX(-12deg);
-          }
-        }
-
-        .animate-scroll-left {
-          animation: scroll-left 30s linear infinite;
-        }
-
-        .animate-scroll-right {
-          animation: scroll-right 25s linear infinite;
-        }
-
-        .animate-shine {
-          animation: shine 3s ease-in-out infinite;
-        }
-
-        .animate-shine-reverse {
-          animation: shine-reverse 3s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };
 
-export default InfiniteAdSlider;
+export default ServiceSlider;
