@@ -1,13 +1,15 @@
 import React from 'react'
 import ServiceSlider from '../Services/serviceSlider'
 import ServicePages from '../Services/ServicePages'
-import Slider from '../LandingPage/Slider'
+
+import MatrimonialServicesSlider from '../Services/ServicesSlider'
 
 const ServicesPage = () => {
   return (
-    <div>ServicesPage
-       <Slider/>
-      {/* <ServiceSlider/> */}
+    <div>
+      
+       <MatrimonialServicesSlider/>
+     
       <ServicePages/>
     </div>
   )

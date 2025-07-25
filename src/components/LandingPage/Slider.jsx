@@ -84,9 +84,9 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-80 overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden ">
       {/* Slider Container */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full ">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -95,11 +95,11 @@ const Slider = () => {
             }`}
           >
             {/* Background Image - Desktop optimized */}
-            <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-0 left-0 w-full h-full " >
               <img 
                 src={slide.image} 
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
                 style={{
                   width: '100vw',
                   height: '100vh',

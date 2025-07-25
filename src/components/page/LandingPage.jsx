@@ -6,6 +6,7 @@ import SamajCards from "../Samaj/SamajCard";
 import ServicePages from "../Services/ServicePages";
 import RitualList from "../Vivahrasme/RitualList";
 import Slider from "../LandingPage/Slider";
+import GroomBrideProfiles from "../LandingPage/GroomBrideProfiles";
 
 
 
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <SamajCards/>
       <ServicePages/>
       <RitualList/>
+      <GroomBrideProfiles/>
       <FeaturesSection />
       {/* <IndianWeddingSlider/> */}
       

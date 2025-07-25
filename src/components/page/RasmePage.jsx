@@ -1,11 +1,13 @@
 import React from 'react'
 import RitualList from '../Vivahrasme/RitualList'
-import WeddingRitualsScroll from '../Vivahrasme/WeddingRitualsScroll';
+
+import RitualsSlider from '../Vivahrasme/RitualsSlider';
 
 const RasmePage = () => {
   return (
     <div>
-        <WeddingRitualsScroll/>
+       
+        <RitualsSlider/>
         <RitualList/>
     </div>
   )
