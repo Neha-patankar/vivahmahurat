@@ -360,9 +360,9 @@ const VivahMahuratBanner = () => {
 
             {/* Bottom decorative elements */}
             <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 pb-1">
-              <span className="text-yellow-300">🪷</span>
+              {/* <span className="text-yellow-300">🪷</span>
               <span className="text-yellow-300">🕉️</span>
-              <span className="text-yellow-300">🪷</span>
+              <span className="text-yellow-300">🪷</span> */}
             </div>
           </div>
         </div>

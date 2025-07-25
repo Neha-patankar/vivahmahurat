@@ -74,25 +74,25 @@ const AboutUs = () => {
     <section className="w-full py-16 bg-gradient-to-r from-rose-500 to-pink-400 ">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center mt-16">
         {/* Media Section */}
-        <div className="relative flex flex-col items-center space-y-6">
+        <div className=" flex flex-col items-center space-y-6">
           {/* Logo */}
-          {/* <div className="relative w-[250px] h-[250px] rounded-full shadow-xl border-8 border-white overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-pink-500 blur-2xl opacity-30 z-0 rounded-full"></div>
+          <div className=" w-[300px] h-[100px] sm:w-[500px] sm:h-[300px] ">
+            <div className=""></div>
             <img
-              src="/vivahlogo.png"
+              src="/about/aboutimage.png"
               alt="Vivah Logo"
-              className="w-full h-full object-cover relative z-10"
+              className="sm:w-full sm:h-full  w-[100] h-[100] object-cover border rounded-2xl border-white border-4"
             />
-          </div> */}
+          </div>
 
           {/* Video Box */}
-          <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white">
+          {/* <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white">
             <video
               src="/about/WhatsApp Video 2025-07-23 at 1.39.29 PM.mp4"
               className="w-full h-full object-cover"
               controls
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Text Section */}

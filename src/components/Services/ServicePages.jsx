@@ -282,6 +282,16 @@ const services = [
     hoverBorder: "hover:border-teal-200",
     image: "/servicesimage/matchmacking.png", // Unique image for Vivah Meetup
   },
+   {
+    id: 10,
+    title: "Biodata Maker",
+    slug: "vivah-meetup",
+    icon: UserCheck,
+    bgGradient: "from-teal-400 to-cyan-500",
+    textColor: "text-teal-600",
+    hoverBorder: "hover:border-teal-200",
+    image: "/servicesimage/biodata.png", // Unique image for Vivah Meetup
+  },
 ];
 
 const ServicePages = () => {
